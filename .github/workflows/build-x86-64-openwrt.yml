@@ -23,7 +23,7 @@ on:
       ip:
         description: '设置默认登录IP'
         required: false
-        default: '192.168.1.2'
+        default: '10.0.0.2'
 
       partsize:
         description: '设置rootfs大小'
@@ -52,6 +52,8 @@ on:
         description: '预设openclash内核'
         required: false
         default: 'amd64'
+        type: choice
+        options: [false, amd64, arm64, armv7, armv6, armv5, 386]
 
       artifact:
         description: '上传固件到Artifact'
